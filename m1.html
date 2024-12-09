@@ -151,7 +151,8 @@
             flex-wrap: nowrap; /* Ensure all items stay in one row */
             justify-content: space-between; /* Distribute space between team members */
             gap: 20px;
-            overflow-x: auto; /* Allow scrolling if the content overflows */
+            overflow-x: hidden; /* Allow scrolling if the content overflows */
+            width: 100%;
         }
         .team-member {
             background: #fff;
@@ -161,6 +162,9 @@
             padding: 20px;
             text-align: center;
             transition: transform 0.3s;
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
         }
         .team-member:hover {
             transform: scale(1.05);
@@ -178,7 +182,7 @@
             color: #555;
         }
         .team-member p {
-            font-size: 2rem;
+            font-size: 1.5rem;
             margin: 5px 0;
             color: #777;
         }
@@ -202,20 +206,36 @@
 								  <ul class="badhon-tab" role="tablist">
 									<li class=""><a href="#home" aria-controls="home" role="tab" data-toggle="tab">
 									<i class="fa fa-bell-o"></i>
-									Designing
+									The Problem
 									</a></li>
 									<li class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
 									<i class="fa fa-html5"></i>
-									Web Development
+									Our Solution
 									</a></li>
 									<li><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">
 									<i class="fa fa-code"></i>
-									Mobile Web
+									Customer Segments
 									</a></li>
 									<li><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">
 									<i class="fa fa-compress"></i>
-									Product Dev
+									Competition
 									</a></li>
+								    <li><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">
+									<i class="fa fa-compress"></i>
+								    Our Advantage
+								    </a></li>
+								    <li><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">
+								    <i class="fa fa-compress"></i>
+								    Key Metrics
+								    </a></li>
+								    <li><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">
+								    <i class="fa fa-compress"></i>
+								    Cost Structure
+								    </a></li>
+								    <li><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">
+								    <i class="fa fa-compress"></i>
+								    Revenue Streams
+								    </a></li>
 								  </ul>
 
 								  <!-- Tab panes -->
