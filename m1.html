@@ -140,13 +140,27 @@
             padding: 50px 20px;
             background-color: #f4f4f4;
         }
-        .tab-pane ul {
-			list-style: disc;
-			padding-left: 20px;
-			margin: 0;
+        .tab-pane {
+			word-wrap: break-word; /* Ensure long text wraps */
+			overflow-y: auto; /* Allow scrolling for long content */
+			max-height: 300px; /* Set a max height for tabs */
+			padding: 15px; /* Add some padding for better readability */
+			background-color: #fff; /* Background to match the design */
+			border: 1px solid #ddd; /* Optional: border around content */
+			border-radius: 5px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
 		}
-		.tab-pane {
-			display: none; /* Hide all tab panes by default */
+
+		.tab-pane ul {
+			list-style-type: disc; /* Display bullet points */
+			margin-left: 20px; /* Indent bullet points */
+			padding-left: 20px;
+		}
+
+		.tab-pane ul li {
+			margin-bottom: 8px; /* Add spacing between list items */
+			color: #555; /* Optional: enhance text readability */
+			line-height: 1.5; /* Improve line spacing */
 		}
 		.tab-pane.active {
 			display: block; /* Show the active tab pane */
@@ -239,7 +253,7 @@
 								    Key Metrics
 								    </a></li>
 								    <li><a href="#costs" aria-controls="costs" role="tab" data-toggle="tab">
-									<i class="fa fa-calculator"></i>
+									<i class="fa fa-calculator" aria-hidden="true"></i>
 								    Cost Structure
 								    </a></li>
 								    <li><a href="#revenue" aria-controls="revenue" role="tab" data-toggle="tab">
