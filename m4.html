@@ -17,6 +17,69 @@
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	<!-- CSS Styles -->
+	<style>
+		body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .interviews-section {
+            padding: 50px 20px;
+            background-color: #ffffff;
+        }
+
+        .text-center {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .interviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .interview-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .interview-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .interview-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+
+        .interview-card ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .interview-card ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .interview-card ul li strong {
+            color: #333;
+        }
+	</style>
 </head>
 <body>
 
@@ -64,68 +127,46 @@
 		</div>
 	</header>
 
-	<!-- Interviews Section: Slideshow -->
+	<!-- Interviews Section -->
 	<section class="interviews-section">
 		<div class="container">
 			<h2 class="text-center">User Interviews</h2>
-			<div id="interviewsCarousel" class="carousel slide" data-ride="carousel">
-				<!-- Indicators -->
-				<ol class="carousel-indicators">
-					<li data-target="#interviewsCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#interviewsCarousel" data-slide-to="1"></li>
-					<li data-target="#interviewsCarousel" data-slide-to="2"></li>
-				</ol>
-
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<div class="carousel-caption">
-							<h3>Ștefania P.</h3>
-							<ul>
-								<li><strong>Age:</strong> 26</li>
-								<li><strong>Background:</strong> Ștefania works as a marketing professional and is passionate about sustainable living. She tries to avoid plastic, uses a reusable bottle, and rides a bike to work.</li>
-								<li><strong>Pain Points:</strong> Finds it difficult to track her overall environmental impact and whether her efforts are making a difference. Struggles to stay motivated when it comes to long-term sustainability.</li>
-								<li><strong>Preferences:</strong> She likes gamification and rewards for achieving eco-goals. Wants personalized tips and real-time feedback on actions. Interested in collaborating with others in challenges to make sustainability fun.</li>
-							</ul>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="carousel-caption">
-							<h3>Mihai R.</h3>
-							<ul>
-								<li><strong>Age:</strong> 34</li>
-								<li><strong>Background:</strong> Mihai is a father of two and runs a small business. He is eco-conscious and encourages his family to adopt sustainable habits, like composting, using solar energy, and reducing waste.</li>
-								<li><strong>Pain Points:</strong> He is unsure if his family's collective efforts are having a significant impact. Needs an easy way to track and educate his kids on the environmental effects of their actions.</li>
-								<li><strong>Preferences:</strong> Values simplicity and ease of use, especially for his kids. Would love to see a family-friendly approach that allows him to track and involve his children in sustainability. Interested in seeing how his household as a whole contributes to sustainability goals.</li>
-							</ul>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="carousel-caption">
-							<h3>Elena D.</h3>
-							<ul>
-								<li><strong>Age:</strong> 29</li>
-								<li><strong>Background:</strong> Elena is a freelancer who works from home. She actively follows eco-friendly trends and tries to maintain a low-carbon lifestyle by reducing waste and purchasing from sustainable brands.</li>
-								<li><strong>Pain Points:</strong> Finds it hard to compare and measure her actions against global sustainability standards. She lacks a community to share her progress and challenges with.</li>
-								<li><strong>Preferences:</strong> A preference for a community-driven approach where she can connect with others on sustainability projects. Prefers an app that combines education, tracking, and social engagement. Likes the idea of contributing to carbon offset projects directly through the app.</li>
-							</ul>
-						</div>
-					</div>
+			<div class="interviews-grid">
+				<!-- Ștefania's Story -->
+				<div class="interview-card">
+					<h3>Ștefania P.</h3>
+					<ul>
+						<li><strong>Age:</strong> 26</li>
+						<li><strong>Background:</strong> Ștefania works as a marketing professional and is passionate about sustainable living. She tries to avoid plastic, uses a reusable bottle, and rides a bike to work.</li>
+						<li><strong>Pain Points:</strong> Finds it difficult to track her overall environmental impact and whether her efforts are making a difference. Struggles to stay motivated when it comes to long-term sustainability.</li>
+						<li><strong>Preferences:</strong> She likes gamification and rewards for achieving eco-goals. Wants personalized tips and real-time feedback on actions. Interested in collaborating with others in challenges to make sustainability fun.</li>
+					</ul>
 				</div>
 
-				<!-- Controls -->
-				<a class="carousel-control-prev" href="#interviewsCarousel" role="button" data-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#interviewsCarousel" role="button" data-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
+				<!-- Mihai's Story -->
+				<div class="interview-card">
+					<h3>Mihai R.</h3>
+					<ul>
+						<li><strong>Age:</strong> 34</li>
+						<li><strong>Background:</strong> Mihai is a father of two and runs a small business. He is eco-conscious and encourages his family to adopt sustainable habits, like composting, using solar energy, and reducing waste.</li>
+						<li><strong>Pain Points:</strong> He is unsure if his family's collective efforts are having a significant impact. Needs an easy way to track and educate his kids on the environmental effects of their actions.</li>
+						<li><strong>Preferences:</strong> Values simplicity and ease of use, especially for his kids. Would love to see a family-friendly approach that allows him to track and involve his children in sustainability. Interested in seeing how his household as a whole contributes to sustainability goals.</li>
+					</ul>
+				</div>
+
+				<!-- Elena's Story -->
+				<div class="interview-card">
+					<h3>Elena D.</h3>
+					<ul>
+						<li><strong>Age:</strong> 29</li>
+						<li><strong>Background:</strong> Elena is a freelancer who works from home. She actively follows eco-friendly trends and tries to maintain a low-carbon lifestyle by reducing waste and purchasing from sustainable brands.</li>
+						<li><strong>Pain Points:</strong> Finds it hard to compare and measure her actions against global sustainability standards. She lacks a community to share her progress and challenges with.</li>
+						<li><strong>Preferences:</strong> A preference for a community-driven approach where she can connect with others on sustainability projects. Prefers an app that combines education, tracking, and social engagement. Likes the idea of contributing to carbon offset projects directly through the app.</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</section>
-
 
 	<!-- User Stories -->
 	<section class="user-stories">
