@@ -24,17 +24,24 @@
 		font-family: Arial, sans-serif;
 		margin: 0;
 		padding: 0;
+		min-height: 100vh;
+		background-color: #f4f4f9;
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100vh;
-		background-color: #99bf38;
-		position: relative;
+		flex-direction: column;
 	}
 
+	header {
+		position: relative;
+		width: 100%;
+		background: #fff;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		z-index: 10;
+	}
+
+	/* Ensure the subscription form stays independent */
 	.subscription-form-container {
 		position: absolute;
-		top: 100%; /* Lowered the position */
+		top: 60%; /* Adjust this to move form up or down */
 		left: 50%;
 		transform: translate(-50%, -50%);
 		width: 100%;
@@ -44,6 +51,7 @@
 		background-color: #fff;
 		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 		border-radius: 10px;
+		z-index: 1;
 	}
 
 	.subscription-form h2 {
@@ -114,8 +122,9 @@
 		}
 	}
 </style>
+
+<!-- Start Wrapper -->
 <div id="wrapper">
-	<!-- Header remains unchanged -->
 	<header>
 		<section class="contactInfo">
 			<div class="container">
@@ -158,7 +167,7 @@
 		</div>
 	</header>
 
-	<!-- Modified Subscription Form -->
+	<!-- Subscription Form -->
 	<div class="subscription-form-container">
 		<form
 				action="https://formspree.io/f/mwpkjqow"
@@ -174,10 +183,9 @@
 			<button type="submit">Subscribe Now</button>
 		</form>
 	</div>
-
 </div>
 
-<!-- Footer remains unchanged -->
+<!-- Footer -->
 <footer>
 	<!-- Footer content -->
 </footer>
