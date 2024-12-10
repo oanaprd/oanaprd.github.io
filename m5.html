@@ -17,33 +17,78 @@
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-
-	<style>
-		/* Make sure both wireframe and landing page images have the same width */
-        .img-fluid {
-          max-width: 100%;  /* Ensure they don't exceed the container's width */
-          height: auto;     /* Maintain aspect ratio */
-        }
-
-        .image-container {
-          max-width: 800px;  /* You can adjust this width as needed */
-          margin: 0 auto;    /* Center the images */
-        }
-		.hidden-link {
-			color: inherit; /* Matches the surrounding text's color */
-			text-decoration: none; /* Removes the underline */
-			transition: color 0.3s ease; /* Smooth color transition */
-			font-size: 30px;
-			margin: 0 auto;
-		}
-
-		.hidden-link:hover {
-			color: #99bf38; /* Green color on hover */
-		}
-	</style>
-
 </head>
 <body>
+<style>
+	body {
+		font-family: Arial, sans-serif;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		background-color: #f4f4f9;
+	}
+
+	.subscription-form-container {
+		position: absolute;
+		top: 60%; /* Adjusts the vertical positioning */
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		max-width: 400px;
+		text-align: center;
+		padding: 20px;
+		background-color: #fff;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		border-radius: 8px;
+	}
+
+	.subscription-form h2 {
+		margin: 0 0 10px;
+		font-size: 24px;
+		color: #333;
+	}
+
+	.subscription-form p {
+		margin: 0 0 20px;
+		color: #666;
+		font-size: 14px;
+	}
+
+	.subscription-form label {
+		display: block;
+		margin-bottom: 15px;
+		text-align: left;
+		color: #555;
+		font-size: 14px;
+	}
+
+	.subscription-form input[type="email"] {
+		width: 100%;
+		padding: 10px;
+		border: 1px solid #ddd;
+		border-radius: 5px;
+		font-size: 14px;
+	}
+
+	.subscription-form button {
+		width: 100%;
+		padding: 10px;
+		background-color: #007bff;
+		color: white;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 16px;
+	}
+
+	.subscription-form button:hover {
+		background-color: #0056b3;
+	}
+
+</style>
 <div id="wrapper">
 	<!-- start header -->
 	<header>
@@ -88,21 +133,22 @@
 		</div>
 	</header><!-- end header -->
 	<!-- modify this form HTML and place wherever you want your form -->
-	<form
-			action="https://formspree.io/f/mwpkjqow"
-			method="POST"
-	>
-		<label>
-			Your email:
-			<input type="email" name="email">
-		</label>
-		<label>
-			Your message:
-			<textarea name="message"></textarea>
-		</label>
-		<!-- your other form fields go here -->
-		<button type="submit">Send</button>
-	</form>
+	<div class="subscription-form-container">
+		<form
+				action="https://formspree.io/f/mwpkjqow"
+				method="POST"
+				class="subscription-form"
+		>
+			<h2>Subscribe to Our Newsletter</h2>
+			<p>Stay updated with the latest news and offers.</p>
+			<label>
+				Your Email:
+				<input type="email" name="email" placeholder="Enter your email" required>
+			</label>
+			<button type="submit">Subscribe</button>
+		</form>
+	</div>
+
 </div>
 
 <footer>
