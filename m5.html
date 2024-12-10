@@ -20,30 +20,37 @@
 </head>
 <body>
 <style>
-	body {
-		font-family: Arial, sans-serif;
+	/* Full-height flexbox layout */
+	html, body {
 		margin: 0;
 		padding: 0;
-		min-height: 100vh;
-		background-color: #f4f4f9;
+		height: 100%;
 		display: flex;
 		flex-direction: column;
+		font-family: Arial, sans-serif;
+		background-color: #f4f4f9;
 	}
 
+	/* Header Styling */
 	header {
-		position: relative;
 		width: 100%;
 		background: #fff;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 		z-index: 10;
 	}
 
-	/* Ensure the subscription form stays independent */
+	/* Main content area with flex-grow */
+	#main-content {
+		flex: 1; /* Pushes footer to the bottom */
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+
+	/* Subscription form styling */
 	.subscription-form-container {
-		position: absolute;
-		top: 60%; /* Adjust this to move form up or down */
-		left: 50%;
-		transform: translate(-50%, -50%);
+		position: relative;
 		width: 100%;
 		max-width: 400px;
 		text-align: center;
@@ -51,7 +58,6 @@
 		background-color: #fff;
 		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 		border-radius: 10px;
-		z-index: 1;
 	}
 
 	.subscription-form h2 {
@@ -100,6 +106,30 @@
 
 	.subscription-form button:hover {
 		background-color: #218838; /* Darker green on hover */
+	}
+
+	/* Footer Styling */
+	footer {
+		width: 100%;
+		background: #fff;
+		padding: 20px;
+		box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+		text-align: center;
+	}
+
+	footer .social-network li {
+		display: inline-block;
+		margin: 0 10px;
+	}
+
+	footer .social-network li a {
+		color: #333;
+		font-size: 18px;
+		transition: color 0.3s;
+	}
+
+	footer .social-network li a:hover {
+		color: #007bff;
 	}
 
 	/* Responsive Design */
@@ -167,28 +197,37 @@
 		</div>
 	</header>
 
-	<!-- Subscription Form -->
-	<div class="subscription-form-container">
-		<form
-				action="https://formspree.io/f/mwpkjqow"
-				method="POST"
-				class="subscription-form"
-		>
-			<h2>Subscribe to Our Newsletter</h2>
-			<p>Stay updated with the latest news, tips, and offers from EcoPal.</p>
-			<label>
-				Your Email:
-				<input type="email" name="email" placeholder="Enter your email address" required>
-			</label>
-			<button type="submit">Subscribe Now</button>
-		</form>
+	<!-- Main Content -->
+	<div id="main-content">
+		<div class="subscription-form-container">
+			<form
+					action="https://formspree.io/f/mwpkjqow"
+					method="POST"
+					class="subscription-form"
+			>
+				<h2>Subscribe to Our Newsletter</h2>
+				<p>Stay updated with the latest news, tips, and offers from EcoPal.</p>
+				<label>
+					Your Email:
+					<input type="email" name="email" placeholder="Enter your email address" required>
+				</label>
+				<button type="submit">Subscribe Now</button>
+			</form>
+		</div>
 	</div>
-</div>
 
-<!-- Footer -->
-<footer>
-	<!-- Footer content -->
-</footer>
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<p>&copy; EcoPal 2024 All right reserved. By WebThemez</p>
+			<ul class="social-network">
+				<li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+			</ul>
+		</div>
+	</footer>
+</div>
 
 <!-- Scripts -->
 <script src="js/jquery.js"></script>
