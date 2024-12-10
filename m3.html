@@ -29,6 +29,15 @@
           max-width: 800px;  /* You can adjust this width as needed */
           margin: 0 auto;    /* Center the images */
         }
+			.hidden-link {
+			color: inherit; /* Matches the surrounding text's color */
+			text-decoration: none; /* Removes the underline */
+			transition: color 0.3s ease; /* Smooth color transition */
+		}
+
+		.hidden-link:hover {
+			color: #99bf38; /* Green color on hover */
+		}
 	</style>
 
 </head>
@@ -41,7 +50,7 @@
 				<div class="col-md-12">
 					<div class="contact-area">
 						<ul>
-							<li><i class="fa fa-phone-square"></i>0723-081-944</li>
+							<li><i class="fa fa-phone-square"></i>07-23-08-1944</li>
 							<li><i class="fa fa-envelope-o"></i>info@ecopal.com</li>
 						</ul>
 					</div>
@@ -87,15 +96,18 @@
 
 	<!-- Landing Page Image Section -->
 	<div class="container text-center">
-		<h2>Landing Page</h2>
+		<p>
+			<a href="https://rddk4geekknmipig.vercel.app/"
+			   style="text-decoration: none; color: inherit;"
+			   target="_blank"
+			   rel="noopener noreferrer"
+			   class="hidden-link">
+				Landing Page
+			</a>
+		</p>
 		<div class="image-container">
 			<img src="img/landing-page.png" alt="Landing Page" class="img-fluid">
 		</div>
-		<p>
-			<a href="https://rddk4geekknmipig.vercel.app/" style="text-decoration: none; color: inherit;" target="_blank" rel="noopener noreferrer">
-				SITE
-			</a>
-		</p>
 	</div>
 
 </div>
@@ -111,7 +123,7 @@
 						Strada Piscul Lung, Bucharest, Romania<br>
 					</address>
 					<p>
-						<i class="icon-phone"></i> +40 723 081 944 <br>
+						<i class="icon-phone"></i> +407-23-08-1944 <br>
 						<i class="icon-envelope-alt"></i> info@ecopal.com
 					</p>
 				</div>
