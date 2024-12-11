@@ -29,22 +29,21 @@
             color: #99bf38;
             margin-bottom: 15px;
         }
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap; /* Allows wrapping if images exceed container width */
-            gap: 10px; /* Space between images */
-            max-width: 100%; /* Restrict to parent container's width */
-        }
-        .container {
-            width: 80%; /* Control overall container size */
-            margin: auto; /* Center the container */
-        }
-        .img-fluid {
-            max-width: 45%; /* Each image gets up to 45% of parent width */
-            height: auto; /* Maintain aspect ratio */
-        }
+		.image-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap; /* Allows wrapping for responsiveness */
+			gap: 10px; /* Space between images */
+		}
+		.container {
+			width: 90%; /* Optional: Increase container width to give more room */
+			margin: auto;
+		}
+		.img-fluid {
+			max-width: 90%; /* Increase the maximum width of images */
+			height: auto; /* Maintain aspect ratio */
+		}
 		.updated-wireframes {
 			padding: 40px 20px;
 			background-color: #f9f9f9;
