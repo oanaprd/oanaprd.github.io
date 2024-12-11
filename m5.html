@@ -24,27 +24,29 @@
             margin: 0;
             padding: 0;
         }
-		.discovery-title {
+        .discovery-title {
             font-size: 24px;
             color: #99bf38;
             margin-bottom: 15px;
         }
-		    .image-container {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		.container {
-			display: flex;
-			justify-content: space-between; /* Adjust spacing */
-			align-items: center;
-			gap: 10px; /* Add space between images */
-		}
-		.img-fluid {
-			max-width: 100%;
-			height: auto;
-		}
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Allows wrapping if images exceed container width */
+            gap: 10px; /* Space between images */
+            max-width: 100%; /* Restrict to parent container's width */
+        }
+        .container {
+            width: 80%; /* Control overall container size */
+            margin: auto; /* Center the container */
+        }
+        .img-fluid {
+            max-width: 45%; /* Each image gets up to 45% of parent width */
+            height: auto; /* Maintain aspect ratio */
+        }
 	</style>
+
 </head>
 <body>
 <div id="wrapper">
