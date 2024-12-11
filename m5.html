@@ -24,12 +24,29 @@
             margin: 0;
             padding: 0;
         }
-		.discovery-title {
+        .discovery-title {
             font-size: 24px;
             color: #99bf38;
             margin-bottom: 15px;
         }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Allows wrapping if images exceed container width */
+            gap: 10px; /* Space between images */
+            max-width: 100%; /* Restrict to parent container's width */
+        }
+        .container {
+            width: 80%; /* Control overall container size */
+            margin: auto; /* Center the container */
+        }
+        .img-fluid {
+            max-width: 45%; /* Each image gets up to 45% of parent width */
+            height: auto; /* Maintain aspect ratio */
+        }
 	</style>
+
 </head>
 <body>
 <div id="wrapper">
@@ -78,14 +95,13 @@
 	<section class="updated-wireframes">
 		<div class="container">
 			<h2 class="discovery-title text-center">Social Media Posts</h2>
-			<div class="image-container text-center">
+			<div class="image-container">
 				<img src="img/facebook.png" alt="Facebook" class="img-fluid">
-			</div>
-			<div class="image-container text-center">
 				<img src="img/reddit.png" alt="Reddit" class="img-fluid">
 			</div>
 		</div>
 	</section>
+
 	<section class="updated-wireframes">
 		<div class="container">
 			<h2 class="discovery-title text-center">Web Analytics</h2>
