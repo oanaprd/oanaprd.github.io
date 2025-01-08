@@ -175,7 +175,34 @@
 
 	// Render Chart
 	const ctx = document.getElementById('revenueChart').getContext('2d');
-	new Chart(ctx, config);
+const revenueData = {
+    labels: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'],
+    datasets: [{
+        label: 'Revenue (in $ million)',
+        data: [0.5, 1.2, 2.4, 4.0, 6.5],
+        backgroundColor: 'rgba(153, 191, 56, 0.6)',
+        borderColor: 'rgba(153, 191, 56, 1)',
+        borderWidth: 2
+    }]
+};
+
+const config = {
+    type: 'line',
+    data: revenueData,
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { display: true },
+            title: { display: true, text: 'Projected Revenue Growth (Years 1-5)' }
+        },
+        scales: {
+            y: { beginAtZero: true }
+        }
+    }
+};
+
+new Chart(ctx, config);
+
 </script>
 <!-- Target Market Visual -->
 <h3>Target Market Distribution</h3>
