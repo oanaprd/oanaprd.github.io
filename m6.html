@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>EcoPal - Empowering Sustainability, One Action at a Time</title>
+	<title>EcoPal - Market Research</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="" />
+	<meta name="description" content="EcoPal Market Research - Comprehensive market analysis for sustainability platform" />
 	<meta name="author" content="http://webthemez.com" />
 
 	<link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -54,8 +54,30 @@
 			margin: 20px auto;
 			text-align: center;
 		}
+
+		.market-research-container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		.market-research-section {
+			margin-bottom: 40px;
+			background-color: #f9f9f9;
+			padding: 20px;
+			border-radius: 5px;
+		}
+
+		.market-research-section h2 {
+			color: #99bf38;
+			margin-bottom: 15px;
+		}
+
+		.market-research-section p {
+			margin-bottom: 10px;
+		}
 	</style>
-</head> 
+</head>
 <body>
 <div id="wrapper">
 	<!-- start header -->
@@ -101,6 +123,95 @@
 		</div>
 	</header><!-- end header -->
 
+	<div class="market-research-container">
+		<h1 class="section-title">EcoPal Market Research</h1>
+
+		<div class="market-research-section">
+			<h2>Target Market Size</h2>
+			<p>Breakdown of EcoPal's target market segments (in billion USD)</p>
+			<div class="chart-container">
+				<canvas id="marketSizeChart"></canvas>
+			</div>
+		</div>
+
+		<div class="market-research-section">
+			<h2>Competitor Analysis</h2>
+			<p>Market share of major competitors in the sustainability sector</p>
+			<div class="chart-container">
+				<canvas id="competitorChart"></canvas>
+			</div>
+		</div>
+
+		<div class="market-research-section">
+			<h2>EcoPal's Projected Market Share</h2>
+			<p>Estimated market share growth over 5 years</p>
+			<div class="chart-container">
+				<canvas id="marketShareChart"></canvas>
+			</div>
+		</div>
+
+		<div class="market-research-section">
+			<h2>Market Value Projection</h2>
+			<p>Total market value and EcoPal's share over 5 years (in million USD)</p>
+			<table class="table">
+				<thead>
+				<tr>
+					<th>Year</th>
+					<th>Total Market Value</th>
+					<th>EcoPal's Market Share Value</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>1</td>
+					<td>500</td>
+					<td>10</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>550</td>
+					<td>27.5</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>605</td>
+					<td>48.4</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>665</td>
+					<td>79.8</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>732</td>
+					<td>109.8</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="market-research-section">
+			<h2>Conclusion</h2>
+			<p>
+				Based on our market research, EcoPal shows strong potential for profitability. The total addressable market
+				for sustainability solutions is substantial, valued at approximately 450 billion USD. With a projected
+				market share growth from 2% in Year 1 to 15% by Year 5, EcoPal's market value is expected to increase from
+				10 million USD to nearly 110 million USD.
+			</p>
+			<p>
+				While facing competition from established players like EcoVibe and GreenLife, there's significant room for
+				growth in this expanding market. EcoPal's innovative approach and focus on user engagement in sustainability
+				efforts position it well to capture an increasing market share over the next five years.
+			</p>
+			<p>
+				<strong>
+					In conclusion, the market analysis suggests that EcoPal has a promising and potentially profitable future in
+					the sustainability sector, with substantial room for growth and value creation.
+				</strong>
+			</p>
+		</div>
+	</div>
 </div>
 
 <footer>
@@ -170,6 +281,70 @@
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/animate.js"></script>
 <script src="js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+	// Market Size Chart
+	new Chart(document.getElementById('marketSizeChart'), {
+		type: 'pie',
+		data: {
+			labels: ['Sustainable Products', 'Eco-friendly Services', 'Green Technology', 'Renewable Energy'],
+			datasets: [{
+				data: [150, 100, 80, 120],
+				backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+			}]
+		},
+		options: {
+			responsive: true,
+			title: {
+				display: true,
+				text: 'Target Market Size (in billion USD)'
+			}
+		}
+	});
+
+	// Competitor Chart
+	new Chart(document.getElementById('competitorChart'), {
+		type: 'bar',
+		data: {
+			labels: ['EcoVibe', 'GreenLife', 'SustainaBiz', 'EarthFirst', 'Others'],
+			datasets: [{
+				label: 'Market Share (%)',
+				data: [25, 20, 15, 10, 30],
+				backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
+			}]
+		},
+		options: {
+			responsive: true,
+			scales: {
+				y: {
+					beginAtZero: true
+				}
+			}
+		}
+	});
+
+	// Market Share Projection Chart
+	new Chart(document.getElementById('marketShareChart'), {
+		type: 'line',
+		data: {
+			labels: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'],
+			datasets: [{
+				label: 'Projected Market Share (%)',
+				data: [2, 5, 8, 12, 15],
+				borderColor: '#36A2EB',
+				fill: false
+			}]
+		},
+		options: {
+			responsive: true,
+			scales: {
+				y: {
+					beginAtZero: true
+				}
+			}
+		}
+	});
+</script>
 
 </body>
 </html>
