@@ -120,19 +120,19 @@
 				<th>Unique Selling Points</th>
 			</tr>
 			<tr>
-				<td>Green Solutions Inc.</td>
+				<td>JouleBug</td>
 				<td>25</td>
-				<td>Wide product range, global presence</td>
+				<td>Gamified sustainability tracking</td>
 			</tr>
 			<tr>
-				<td>EcoLife Co.</td>
+				<td>Oroeco</td>
 				<td>18</td>
-				<td>Affordable pricing, community programs</td>
+				<td>Carbon footprint tracking</td>
 			</tr>
 			<tr>
-				<td>SustainCo</td>
+				<td>Good On You</td>
 				<td>12</td>
-				<td>Innovative technology, strong partnerships</td>
+				<td>Sustainable fashion insights</td>
 			</tr>
 		</table>
 
@@ -142,10 +142,6 @@
 			<canvas id="revenueChart"></canvas>
 		</div>
 	</div>
-
-	<footer>
-		<!-- Footer Content Here -->
-	</footer>
 </div>
 
 <script>
@@ -181,6 +177,53 @@
 	const ctx = document.getElementById('revenueChart').getContext('2d');
 	new Chart(ctx, config);
 </script>
+<!-- Target Market Visual -->
+<h3>Target Market Distribution</h3>
+<div class="chart-container">
+	<canvas id="targetMarketChart"></canvas>
+</div>
+
+<script>
+	// Target Market Data
+	const targetMarketData = {
+		labels: ['Young Professionals (20-35)', 'Eco-conscious Families', 'Corporate Clients', 'Educational Institutions'],
+		datasets: [{
+			label: 'Target Market Segments',
+			data: [40, 30, 20, 10], // Example percentages
+			backgroundColor: [
+				'rgba(153, 191, 56, 0.8)', // Green
+				'rgba(77, 148, 255, 0.8)', // Blue
+				'rgba(255, 205, 86, 0.8)', // Yellow
+				'rgba(255, 99, 132, 0.8)'  // Red
+			],
+			borderColor: [
+				'rgba(153, 191, 56, 1)',
+				'rgba(77, 148, 255, 1)',
+				'rgba(255, 205, 86, 1)',
+				'rgba(255, 99, 132, 1)'
+			],
+			borderWidth: 1
+		}]
+	};
+
+	// Pie Chart Configuration
+	const targetMarketConfig = {
+		type: 'pie',
+		data: targetMarketData,
+		options: {
+			responsive: true,
+			plugins: {
+				legend: { display: true, position: 'bottom' },
+				title: { display: true, text: 'Target Market Distribution' }
+			}
+		}
+	};
+
+	// Render Target Market Chart
+	const targetMarketCtx = document.getElementById('targetMarketChart').getContext('2d');
+	new Chart(targetMarketCtx, targetMarketConfig);
+</script>
+
 <footer>
 	<div class="container">
 		<div class="row">
