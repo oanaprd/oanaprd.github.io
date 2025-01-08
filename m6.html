@@ -19,30 +19,43 @@
 	<![endif]-->
 
 	<style>
-		/* Make sure both wireframe and landing page images have the same width */
-        .img-fluid {
-          max-width: 100%;  /* Ensure they don't exceed the container's width */
-          height: auto;     /* Maintain aspect ratio */
-        }
+		.img-fluid {
+			max-width: 100%;
+			height: auto;
+		}
 
-        .image-container {
-          max-width: 800px;  /* You can adjust this width as needed */
-          margin: 0 auto;    /* Center the images */
-        }
-		.hidden-link {
-			color: inherit; /* Matches the surrounding text's color */
-			text-decoration: none; /* Removes the underline */
-			transition: color 0.3s ease; /* Smooth color transition */
-			font-size: 30px;
+		.image-container {
+			max-width: 800px;
 			margin: 0 auto;
 		}
 
-		.hidden-link:hover {
-			color: #99bf38; /* Green color on hover */
+		.section-title {
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 20px;
+			font-size: 30px;
+			color: #99bf38;
+		}
+
+		.table {
+			margin: 20px auto;
+			width: 90%;
+			text-align: left;
+			border: 1px solid #ddd;
+		}
+
+		.table th, .table td {
+			padding: 10px;
+			border: 1px solid #ddd;
+		}
+
+		.chart-container {
+			max-width: 600px;
+			margin: 20px auto;
+			text-align: center;
 		}
 	</style>
-
-</head>
+</head> 
 <body>
 <div id="wrapper">
 	<!-- start header -->
@@ -89,7 +102,85 @@
 	</header><!-- end header -->
 
 </div>
+<div id="wrapper">
+	<header>
+		<!-- Header Content Here -->
+	</header>
 
+	<div class="analysis-container">
+		<h2 class="section-title">Market Research Analysis</h2>
+		<p style="text-align: center;">This section provides insights into our market research, including target market size, competitors, and revenue projections for the first five years.</p>
+
+		<!-- Competitor Table -->
+		<h3>Competitor Analysis</h3>
+		<table class="table">
+			<tr>
+				<th>Competitor</th>
+				<th>Market Share (%)</th>
+				<th>Unique Selling Points</th>
+			</tr>
+			<tr>
+				<td>Green Solutions Inc.</td>
+				<td>25</td>
+				<td>Wide product range, global presence</td>
+			</tr>
+			<tr>
+				<td>EcoLife Co.</td>
+				<td>18</td>
+				<td>Affordable pricing, community programs</td>
+			</tr>
+			<tr>
+				<td>SustainCo</td>
+				<td>12</td>
+				<td>Innovative technology, strong partnerships</td>
+			</tr>
+		</table>
+
+		<!-- Revenue Projection Chart -->
+		<h3>Revenue Projections (Years 1-5)</h3>
+		<div class="chart-container">
+			<canvas id="revenueChart"></canvas>
+		</div>
+	</div>
+
+	<footer>
+		<!-- Footer Content Here -->
+	</footer>
+</div>
+
+<script>
+	// Revenue Data
+	const revenueData = {
+		labels: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'],
+		datasets: [{
+			label: 'Revenue (in $ million)',
+			data: [0.5, 1.2, 2.4, 4.0, 6.5],
+			backgroundColor: 'rgba(153, 191, 56, 0.6)',
+			borderColor: 'rgba(153, 191, 56, 1)',
+			borderWidth: 2
+		}]
+	};
+
+	// Revenue Chart Configuration
+	const config = {
+		type: 'line',
+		data: revenueData,
+		options: {
+			responsive: true,
+			plugins: {
+				legend: { display: true },
+				title: { display: true, text: 'Projected Revenue Growth (Years 1-5)' }
+			},
+			scales: {
+				y: { beginAtZero: true }
+			}
+		}
+	};
+
+	// Render Chart
+	const ctx = document.getElementById('revenueChart').getContext('2d');
+	new Chart(ctx, config);
+</script>
 <footer>
 	<div class="container">
 		<div class="row">
