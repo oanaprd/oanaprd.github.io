@@ -103,7 +103,7 @@
 		<h1 style="text-align: center; color: #99bf38; margin-bottom: 30px;">EcoPal Market Research</h1>
 
 		<div class="market-research-section">
-			<h2>1. Target Market Size</h2>
+			<h2>1. Market Size Determination</h2>
 			<p>EcoPal's total addressable market is estimated at $450 billion, divided into the following sub-markets:</p>
 			<div class="chart-container">
 				<canvas id="marketSizeChart"></canvas>
@@ -111,19 +111,60 @@
 		</div>
 
 		<div class="market-research-section">
-			<h2>2. Competitors in the Market</h2>
+			<h2>2. Competitor Analysis</h2>
 			<p>We've identified approximately 15 major competitors in the sustainability app market. Key players include:</p>
-			<ul>
-				<li>JouleBug</li>
-				<li>Oroeco</li>
-				<li>Good On You</li>
-				<li>Carbon Footprint Calculator</li>
-				<li>Ecosia</li>
-			</ul>
+			<table class="table">
+				<thead>
+				<tr>
+					<th>Competitor</th>
+					<th>Focus Area</th>
+					<th>Market Share</th>
+					<th>Strengths</th>
+					<th>Weaknesses</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>JouleBug</td>
+					<td>Gamified sustainability</td>
+					<td>15%</td>
+					<td>Gamification, user-friendly design</td>
+					<td>Limited community features</td>
+				</tr>
+				<tr>
+					<td>Oroeco</td>
+					<td>Carbon footprint tracking</td>
+					<td>10%</td>
+					<td>Precise carbon insights</td>
+					<td>Lacks engaging and gamified elements</td>
+				</tr>
+				<tr>
+					<td>Good On You</td>
+					<td>Sustainable fashion insights</td>
+					<td>5%</td>
+					<td>Deep fashion focus</td>
+					<td>Limited to apparel, narrow scope</td>
+				</tr>
+				<tr>
+					<td>Other Niche Apps</td>
+					<td>Various (local/global)</td>
+					<td>20%</td>
+					<td>Specific tools</td>
+					<td>Fragmented solutions</td>
+				</tr>
+				<tr>
+					<td>Unclaimed Market</td>
+					<td>Untapped eco-conscious market</td>
+					<td>50%</td>
+					<td>-</td>
+					<td>No existing holistic solutions</td>
+				</tr>
+				</tbody>
+			</table>
 		</div>
 
 		<div class="market-research-section">
-			<h2>3. Competition and Market Share</h2>
+			<h2>3. Competitor Analysis</h2>
 			<p>Estimated market share for major competitors:</p>
 			<div class="chart-container">
 				<canvas id="competitorChart"></canvas>
@@ -139,46 +180,46 @@
 		</div>
 
 		<div class="market-research-section">
-			<h2>5. Market Value and EcoPal's Share</h2>
+			<h2>5. Financial Projections</h2>
 			<table class="table">
 				<thead>
 				<tr>
 					<th>Year</th>
-					<th>Total Market Value (Billion USD)</th>
-					<th>EcoPal's Market Share (%)</th>
-					<th>EcoPal's Market Value (Million USD)</th>
+					<th>Revenue</th>
+					<th>Costs</th>
+					<th>Profit</th>
 				</tr>
 				</thead>
 				<tbody>
 				<tr>
-					<td>1</td>
-					<td>450</td>
-					<td>0.5%</td>
-					<td>2.25</td>
+					<td>Year 1</td>
+					<td>$6M</td>
+					<td>$110K</td>
+					<td>$5.89M</td>
 				</tr>
 				<tr>
-					<td>2</td>
-					<td>495</td>
-					<td>1.0%</td>
-					<td>4.95</td>
+					<td>Year 2</td>
+					<td>$18M</td>
+					<td>$110K</td>
+					<td>$17.89M</td>
 				</tr>
 				<tr>
-					<td>3</td>
-					<td>544</td>
-					<td>2.0%</td>
-					<td>10.88</td>
+					<td>Year 3</td>
+					<td>$42M</td>
+					<td>$110K</td>
+					<td>$41.89M</td>
 				</tr>
 				<tr>
-					<td>4</td>
-					<td>598</td>
-					<td>3.5%</td>
-					<td>20.93</td>
+					<td>Year 4</td>
+					<td>$72M</td>
+					<td>$110K</td>
+					<td>$71.89M</td>
 				</tr>
 				<tr>
-					<td>5</td>
-					<td>658</td>
-					<td>5.0%</td>
-					<td>32.90</td>
+					<td>Year 5</td>
+					<td>$108M</td>
+					<td>$110K</td>
+					<td>$107.89M</td>
 				</tr>
 				</tbody>
 			</table>
@@ -271,9 +312,9 @@
 	new Chart(document.getElementById('marketSizeChart'), {
 		type: 'pie',
 		data: {
-			labels: ['Sustainable Products', 'Eco-friendly Services', 'Green Technology', 'Renewable Energy'],
+			labels: ['Urban Millennials & Gen Z', 'Eco-conscious Families', 'SMEs', 'Educationsl Institutions'],
 			datasets: [{
-				data: [150, 100, 120, 80],
+				data: [690, 400, 32, 1],
 				backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
 			}]
 		},
@@ -290,11 +331,11 @@
 	new Chart(document.getElementById('competitorChart'), {
 		type: 'bar',
 		data: {
-			labels: ['JouleBug', 'Oroeco', 'Good On You', 'Carbon Footprint Calculator', 'Ecosia', 'Others'],
+			labels: ['JouleBug', 'Oroeco', 'Good On You', 'Other Niche Apps', 'Unclaimed Market'],
 			datasets: [{
 				label: 'Estimated Market Share (%)',
-				data: [15, 12, 10, 8, 5, 50],
-				backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#C9CBCF']
+				data: [15, 10, 5, 20, 50],
+				backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
 			}]
 		},
 		options: {
@@ -314,7 +355,7 @@
 			labels: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'],
 			datasets: [{
 				label: 'Projected Market Share (%)',
-				data: [0.5, 1.0, 2.0, 3.5, 5.0],
+				data: [1, 3, 7, 12, 18],
 				borderColor: '#36A2EB',
 				fill: false
 			}]
