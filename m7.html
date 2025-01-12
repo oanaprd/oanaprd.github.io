@@ -40,6 +40,40 @@
         .hidden-link:hover {
             color: #99bf38; /* Green color on hover */
         }
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .image-grid img {
+            max-width: calc(50% - 15px); /* Two images per row with a gap */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .link-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .link-container a {
+            display: inline-block;
+            background-color: #99bf38;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .link-container a:hover {
+            background-color: #7aa12d;
+        }
     </style>
 
 </head>
@@ -87,7 +121,22 @@
             </div>
         </div>
     </header><!-- end header -->
+    <section>
+        <div class="container">
+            <h2 class="text-center">Explore Our Sustainability Efforts</h2>
+            <div class="image-grid">
+                <img src="img/final1.jpg" alt="Sustainability Action 1">
+                <img src="img/final2.jpg" alt="Sustainability Action 2">
+                <img src="img/final3.jpg" alt="Sustainability Action 3">
+                <img src="img/final4.jpg" alt="Sustainability Action 4">
+            </div>
+        </div>
+    </section>
 
+    <!-- Link Section -->
+    <section class="link-container">
+        <a href="https://ftszjdvqn0egcrps.vercel.app/">MVP</a>
+    </section>
 </div>
 
 <footer>
