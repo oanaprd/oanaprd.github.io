@@ -1,476 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>EcoPal - Empowering Sustainability, One Action at a Time</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="" />
-<meta name="author" content="http://webthemez.com" />
-<!-- css -->
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
-<link href="css/jcarousel.css" rel="stylesheet" />
-<link href="css/flexslider.css" rel="stylesheet" />
-<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet" />
-
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EcoPal</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<style>
-		body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        .navbar-brand img {
-			width: 200px;  /* Adjust the width as needed */
-			height: auto;  /* Keep the aspect ratio */
-		}
-        #team {
-            padding: 50px 20px;
-            background-color: #f4f4f4;
-        }
-        .tab-pane {
-			word-wrap: break-word; /* Ensure long text wraps */
-			overflow-y: auto; /* Allow scrolling for long content */
-			max-height: 300px; /* Set a max height for tabs */
-			padding: 15px; /* Add some padding for better readability */
-			background-color: #fff; /* Background to match the design */
-			border: 1px solid #ddd; /* Optional: border around content */
-			border-radius: 5px;
-			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
-		}
-
-		.tab-pane ul {
-			list-style-type: disc; /* Display bullet points */
-			margin-left: 20px; /* Indent bullet points */
-			padding-left: 20px;
-		}
-
-		.tab-pane ul li {
-			margin-bottom: 8px; /* Add spacing between list items */
-			color: #555; /* Optional: enhance text readability */
-			line-height: 1.5; /* Improve line spacing */
-		}
-		.tab-pane.active {
-			display: block; /* Show the active tab pane */
-		}
-        .team-section h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #333;
-            text-align: center;
-        }
-        .team-container {
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-between; /* Distributes space evenly between items */
-            gap: 20px;
-            width: 100%; /* Ensure container stretches to full width */
-            max-width: 1200px; /* Optional: restrict maximum width for design consistency */
-            margin: 0 auto; /* Center the container */
-        }
-        .team-member {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 220px; /* Increase size slightly to balance layout */
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        .team-member:hover {
-            transform: scale(1.05);
-        }
-        .team-member img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-        }
-        .team-member h2 {
-            font-size: 1.5rem;
-            margin: 10px 0;
-            color: #555;
-        }
-        .team-member p {
-            font-size: 1.2rem; /* Font size for roles */
-            margin: 5px 0;
-            color: #777;
-            font-weight: bold;
-        }
-        .team-member a {
-            text-decoration: none;
-            color: #007BFF;
-            font-weight: bold;
-        }
-        .team-member a:hover {
-            text-decoration: underline;
-        }
+		/* Add custom styles here */
 	</style>
 </head>
 <body>
-<div id="wrapper">
-	<!-- start header -->
-	<header>
-	<section class="contactInfo">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<div class="container">
-		<div class="col-md-12">
-			<div class="contact-area">
-				<ul>
-					<li><i class="fa fa-phone-square"></i>07-23-08-1944</li>
-					<li><i class="fa fa-envelope-o"></i>info@ecopal.com</li>
+		<a class="navbar-brand" href="#">EcoPal</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#featured">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#team">Team</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#service">Our Journey</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#testimonial">Testimonial</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#contact">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<section id="featured" class="py-5 bg-light">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-md-6">
+				<h1 class="display-4 mb-3">EcoPal</h1>
+				<p class="lead mb-4">Empowering Sustainability, One Action at a Time</p>
+				<a href="#" class="btn btn-primary btn-lg">Get Started</a>
+			</div>
+			<div class="col-md-6">
+				<img src="img/eco-illustration.svg" alt="EcoPal Illustration" class="img-fluid">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="team" class="py-5 bg-white">
+	<div class="container">
+		<h2 class="text-center mb-5">Meet the Team</h2>
+		<div class="row">
+			<div class="col-md-4 mb-4">
+				<div class="card h-100">
+					<img src="img/oana-preda.jpg" class="card-img-top" alt="Oana Preda">
+					<div class="card-body">
+						<h5 class="card-title">Oana Preda</h5>
+						<p class="card-text">Project Manager</p>
+						<a href="mailto:oana@ecopal.com" class="btn btn-outline-primary">Contact</a>
+					</div>
+				</div>
+			</div>
+			<!-- Repeat this structure for other team members -->
+		</div>
+	</div>
+</section>
+
+<section id="service" class="py-5 bg-light">
+	<div class="container">
+		<h2 class="text-center mb-5">Our Journey</h2>
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+			<li class="nav-item" role="presentation">
+				<button class="nav-link active" id="problem-tab" data-bs-toggle="tab" data-bs-target="#problem" type="button" role="tab" aria-controls="problem" aria-selected="true">The Problem</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="solution-tab" data-bs-toggle="tab" data-bs-target="#solution" type="button" role="tab" aria-controls="solution" aria-selected="false">Our Solution</button>
+			</li>
+			<!-- Add other tab buttons here -->
+		</ul>
+		<div class="tab-content mt-3" id="myTabContent">
+			<div class="tab-pane fade show active" id="problem" role="tabpanel" aria-labelledby="problem-tab">
+				<h3>The Problem</h3>
+				<p>Climate change, environmental degradation, and overconsumption are critical global issues. Many people wish to adopt eco-friendly habits but lack awareness, actionable insights, or motivation to sustain those habits.</p>
+				<!-- Add more content here -->
+			</div>
+			<!-- Add other tab panes here -->
+		</div>
+	</div>
+</section>
+
+<section id="testimonial" class="py-5 bg-primary text-white">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-8 text-center">
+				<p class="lead">"EcoPal is more than an app - it's a movement to transform sustainability from a challenge into an exciting lifestyle. Join us on this journey to make every step eco-friendly!"</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="contact" class="py-5 bg-light">
+	<div class="container">
+		<h2>Contact Us</h2>
+		<p>Feel free to reach out to us with any questions or inquiries.</p>
+	</div>
+</section>
+
+<footer class="bg-dark text-white py-4">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h5>Contact Us</h5>
+				<address>
+					<strong>EcoPal Inc.</strong><br>
+					Strada Piscul Lung, Bucharest, Romania<br>
+					<abbr title="Phone">P:</abbr> +407-23-08-1944
+				</address>
+				<a href="mailto:info@ecopal.com" class="text-white">info@ecopal.com</a>
+			</div>
+			<div class="col-md-4">
+				<h5>Quick Links</h5>
+				<ul class="list-unstyled">
+					<li><a href="#" class="text-white">Latest Events</a></li>
+					<li><a href="#" class="text-white">Terms and Conditions</a></li>
+					<li><a href="#" class="text-white">Privacy Policy</a></li>
+					<li><a href="#" class="text-white">Careers</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<h5>Follow Us</h5>
+				<ul class="list-inline">
+					<li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a></li>
+					<li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-twitter"></i></a></li>
+					<li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a></li>
+					<li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-instagram"></i></a></li>
 				</ul>
 			</div>
 		</div>
-	</div>
-		</section>
-        <div class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="m1.html"><img src="img/logo.png" alt="logo"/></a>
-                </div>
-                <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="m1.html">M1</a></li>
-						<li><a href="m2.html">M2</a></li>
-						<li><a href="m3.html">M3</a></li>
-                        <li><a href="m4.html">M4</a></li>
-                        <li><a href="m5.html">M5</a></li>
-                        <li><a href="m6.html">M6</a></li>
-						<li><a href="m7.html">M7 M8 M9</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-	</header>
-	<!-- end header -->
-	<section id="featured">
-
-	<!-- Slider -->
-        <div id="main-slider" class="flexslider">
-            <ul class="slides">
-              <li>
-                <img src="img/slides/3.jpg" alt="" />
-                <div class="flex-caption">
-                    <h3>EcoPal</h3>
-					<p>Empowering Sustainability, One Action at a Time</p>
-                </div>
-              </li>
-            </ul>
-        </div>
-	<!-- end slider -->
-	</section>
-
-	<section id="team">
-		<div class="container">
-			<div class="team-section">
-				<h1>Meet the Team</h1>
-				<div class="team-container">
-					<!-- Team Member 1 -->
-					<div class="team-member">
-						<img src="img/oana-preda.jpg" alt="Oana Preda">
-						<h2>Oana Preda</h2>
-						<p>Project Manager</p>
-						<a href="mailto:oanapreda49@outlook.com">oanapreda49@outlook.com</a>
-					</div>
-					<!-- Team Member 2 -->
-					<div class="team-member">
-						<img src="img/emma-williams.jpg" alt="Emma Williams">
-						<h2>Emma Williams</h2>
-						<p>Lead Developer</p>
-						<a href="mailto:emma.williams@example.com">emma.williams@example.com</a>
-					</div>
-					<!-- Team Member 3 -->
-					<div class="team-member">
-						<img src="img/raj-mehta.jpg" alt="Raj Mehta">
-						<h2>Raj Mehta</h2>
-						<p>Sustainability Consultant</p>
-						<a href="mailto:raj.mehta@example.com">raj.mehta@example.com</a>
-					</div>
-					<!-- Team Member 4 -->
-					<div class="team-member">
-						<img src="img/lila-garcia.jpg" alt="Lila Garcia">
-						<h2>Lila Garcia</h2>
-						<p>UX/UI Designer</p>
-						<a href="mailto:lila.garciaa@example.com">lila.garciaa@example.com</a>
-					</div>
-					<!-- Team Member 5 -->
-					<div class="team-member">
-						<img src="img/james-brown.jpg" alt="James Brown">
-						<h2>James Brown</h2>
-						<p>Marketing Strategist</p>
-						<a href="mailto:james.brown@example.com">james.brown@example.com</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="service">
-            <div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="block-bottom">
-							<div class="service-tab">
-								  <!-- Nav tabs -->
-								  <ul class="badhon-tab" role="tablist">
-									<li class=""><a href="#problem" aria-controls="problem" role="tab" data-toggle="tab">
-									<i class="fa fa-exclamation-circle"></i>
-									The Problem
-									</a></li>
-									<li class="active"><a href="#solution" aria-controls="solution" role="tab" data-toggle="tab">
-									<i class="fa fa-lightbulb-o"></i>
-									Our Solution
-									</a></li>
-									<li><a href="#customers" aria-controls="customers" role="tab" data-toggle="tab">
-									<i class="fa fa-users"></i>
-									Customer Segments
-									</a></li>
-									<li><a href="#competition" aria-controls="competition" role="tab" data-toggle="tab">
-									<i class="fa fa-trophy"></i>
-									Competition
-									</a></li>
-								    <li><a href="#advantages" aria-controls="advantages" role="tab" data-toggle="tab">
-									<i class="fa fa-thumbs-up"></i>
-								    Our Advantage
-								    </a></li>
-								    <li><a href="#metrics" aria-controls="metrics" role="tab" data-toggle="tab">
-									<i class="fa fa-tachometer"></i>
-								    Key Metrics
-								    </a></li>
-								    <li><a href="#costs" aria-controls="costs" role="tab" data-toggle="tab">
-									<i class="fa fa-bar-chart"></i>
-								    Cost Structure
-								    </a></li>
-								    <li><a href="#revenue" aria-controls="revenue" role="tab" data-toggle="tab">
-									<i class="fa fa-money"></i>
-								    Revenue Streams
-								    </a></li>
-								  </ul>
-
-								  <!-- Tab panes -->
-								  <div class="tab-content edit-tab-content">
-									<div class="tab-pane edit-tab active" id="problem">
-										<h3>The Problem</h3>
-										<p>Climate change, environmental degradation, and overconsumption are critical global issues. Many people wish to adopst eco-friendly habits but lack awareness, actionable insights, or motivation to sustain those habits.</p>
-										<p>Key Challenges Identified:</p>
-											<ul>
-												<li><strong>Lack of Awareness:</strong> People are unsure how their daily actions impact the environment.</li>
-												<li><strong>Low Engagement:</strong> Sustainability initiiatives often fail due to a lack of gamification or incentives.</li>
-												<li><strong>Fragmented Solutions:</strong> Existing apps and tools either focus on education, tracking, or community - but not all.</li>
-											</ul>
-									</div>
-									<div class="tab-pane edit-tab" id="solution">
-										<h3>Our Solution</h3>
-										<p>EcoPal is an all-in-one platform that makes sustainability accessible, actionable, and rewarding.</p>
-											<ul>
-												<li><strong>Track:</strong> Measure your carbon footprint effortlessly.</li>
-												<li><strong>Act:</strong> Get personalized recommendations and join challenges.</li>
-												<li><strong>Offset:</strong> Neutralize your impact through verified projects.</li>
-												<li><strong>Connect:</strong> Engage with like-minded communities and make a difference together.</li>
-											</ul>
-
-									</div>
-									<div class="tab-pane edit-tab" id="customers">
-										<h3>Customer Segments</h3>
-										<ul>
-											<li><strong>Environmentally Conscious Individuals:</strong> Urban millennials, Gen Z, and famillies interested in sustainable living.</li>
-											<li><strong>Corporate & Small Businesses:</strong> Looking to involve employees in sustainability efforts.</li>
-											<li><strong>Educationall Institutions:</strong> Schools and colleges keen to integrate eco-friendly practices.</li>
-										</ul>
-
-									</div>
-									  <div class="tab-pane edit-tab" id="competition">
-										  <h3>Competition</h3>
-										  <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
-											  <thead>
-											  <tr>
-												  <th style="padding: 8px; background-color: #f4f4f4;">Competitor</th>
-												  <th style="padding: 8px; background-color: #f4f4f4;">Focus Area</th>
-												  <th style="padding: 8px; background-color: #f4f4f4;">Limitations</th>
-											  </tr>
-											  </thead>
-											  <tbody>
-											  <tr>
-												  <td style="padding: 8px;">JouleBug</td>
-												  <td style="padding: 8px;">Gamified sustainability tracking</td>
-												  <td style="padding: 8px;">Limited global community features</td>
-											  </tr>
-											  <tr>
-												  <td style="padding: 8px;">Oroeco</td>
-												  <td style="padding: 8px;">Carbon footprint tracking</td>
-												  <td style="padding: 8px;">Less interactive, lacks challenges</td>
-											  </tr>
-											  <tr>
-												  <td style="padding: 8px;">Good On You</td>
-												  <td style="padding: 8px;">Sustainable fashion insights</td>
-												  <td style="padding: 8px;">Focused only on apparel</td>
-											  </tr>
-											  </tbody>
-										  </table>
-									  </div>
-									  <div class="tab-pane edit-tab" id="advantages">
-										  <h3>Our Advantage</h3>
-										  <ul>
-											  <li><strong>Holistic Approach:</strong> Combines tracking, gamification, offsetting, and community-building.</li>
-											  <li><strong>Gamified Engagement:</strong> Keeps users motivated with rewards and challenges.</li>
-											  <li><strong>Personaliziation:</strong> AI-driven insights tailored to individual habits.</li>
-											  <li><strong>Community Connection:</strong> Strong emphasis on local and global collaboration.</li>
-										  </ul>
-
-									  </div>
-									  <div class="tab-pane edit-tab" id="metrics">
-										  <h3>Key Metrics</h3>
-										  <ul>
-											  <li><strong>User Engagement:</strong> Daily active users (DAU) and retention rates.</li>
-											  <li><strong>Carbon Imapct:</strong> Total CO2 emissions reduced or offset via the platform.</li>
-											  <li><strong>Community Growth:</strong> Number of eco-communities formed and events hosted.</li>
-											  <li><strong>Revenue Metrics:</strong> Subscription signups and marketplace transactions.</li>
-										  </ul>
-
-									  </div>
-									  <div class="tab-pane edit-tab" id="costs">
-										  <h3>Cost Structure</h3>
-										  <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
-											  <thead>
-											  <tr>
-												  <th style="padding: 8px; background-color: #f4f4f4;">Expense</th>
-												  <th style="padding: 8px; background-color: #f4f4f4;">Estimation</th>
-											  </tr>
-											  </thead>
-											  <tbody>
-											  <tr>
-												  <td style="padding: 8px;">Development & Maintenance</td>
-												  <td style="padding: 8px;">$50,000/year</td>
-											  </tr>
-											  <tr>
-												  <td style="padding: 8px;">Marketing & Outreach</td>
-												  <td style="padding: 8px;">$30,000/year</td>
-											  </tr>
-											  <tr>
-												  <td style="padding: 8px;">Operational Costs</td>
-												  <td style="padding: 8px;">$20,000/year</td>
-											  </tr>
-											  <tr>
-												  <td style="padding: 8px;">Partner Collaboration</td>
-												  <td style="padding: 8px;">$10,000/year</td>
-											  </tr>
-											  </tbody>
-										  </table>
-									  </div>
-									  <div class="tab-pane edit-tab" id="revenue">
-										  <h3>Revenue Streams</h3>
-										  <ul>
-											  <li><strong>Freemium Model:</strong> Subscriptions for premium features.</li>
-											  <ul>
-												  <li>Basic plan: Free</li>
-												  <li>Premium plan: 9.99/month</li>
-											  </ul>
-											  <li style="margin-top: 10px;"><strong>Partner Collaborations:</strong> Sponsored content from eco-friendly brands.</li>
-											  <li><strong>Affiliate Sales:</strong> Revenue share from products sold through the app's marketplace.</li>
-											  <li><strong>Offsetting Transactions:</strong> A percentage from each offset purchase.</li>
-										  </ul>
-									  </div>
-								  </div>
-							</div>
-						</div>
-					</div><!-- .col-md-12 close -->
-				</div><!-- row close -->
-            </div><!-- .container close -->
-        </section>
-
-
-	<div class="testimonial-area">
-		<div class="testimonial-solid">
-			<div class="container">
-				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-					<div class="carousel-inner">
-						<div class="item">
-							<p>EcoPal is more than an app - it's a movement to transform sustainability from a challenge into an exciting lifestyle. Join us on this journey to make every step eco-friendly!</p>
-						</div>
-					</div>
-				</div>
-			</div>
+		<hr>
+		<div class="text-center">
+			<small>&copy; 2024 EcoPal. All rights reserved.</small>
 		</div>
 	</div>
-	<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3">
-				<div class="widget">
-					<h5 class="widgetheading">Our Contact</h5>
-					<address>
-					<strong>EcoPal company Inc</strong><br>
-					Strada Piscul Lung, Bucharest, Romania<br>
-					</address>
-					<p>
-						<i class="icon-phone"></i> +407-23-08-1944 <br>
-						<i class="icon-envelope-alt"></i> info@ecopal.com
-					</p>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="widget">
-					<h5 class="widgetheading">Quick Links</h5>
-					<ul class="link-list">
-						<li><a href="#">Latest Events</a></li>
-						<li><a href="#">Terms and conditions</a></li>
-						<li><a href="#">Privacy policy</a></li>
-						<li><a href="#">Career</a></li>
-						<li><a href="#">Contact us</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="sub-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="copyright">
-						<p>
-							<span>&copy; EcoPall 2024 All right reserved. By </span><a href="http://webthemez.com" EcoPal="_blank">WebThemez</a>
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<ul class="social-network">
-						<li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-						<li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
-						<li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	</footer>
-</div>
-<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
-<!-- javascript
-    ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/jquery.fancybox-media.js"></script>
-<script src="js/portfolio/jquery.quicksand.js"></script>
-<script src="js/portfolio/setting.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/animate.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/owl-carousel/owl.carousel.js"></script>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
